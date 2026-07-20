@@ -1,0 +1,38 @@
+generated: '2026-07-17'
+method: searched
+source: openapi/alterestate-openapi.yml
+docs: https://dev.alterestate.com/
+summary:
+  types:
+  - apiKey
+  - oauth2
+  api_key_in:
+  - header
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: aetoken
+  type: apiKey
+  in: header
+  parameter: aetoken
+  description: Public API token from the AlterEstate dashboard (Settings > Public API Token,
+    admin access). Used for read endpoints.
+  sources:
+  - openapi/alterestate-openapi.yml
+- name: tokenAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: 'Account API key sent as: Authorization: Token <api_key>. Used for lead submission.'
+  sources:
+  - openapi/alterestate-openapi.yml
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://secure.alterestate.com/oauth/authorize/
+    tokenUrl: https://secure.alterestate.com/oauth/token/
+    scopes: 1
+  description: OAuth 2.0 authorization used by the AlterEstate (Brik/alterai) hosted MCP server.
+  sources:
+  - openapi/alterestate-openapi.yml
