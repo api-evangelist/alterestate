@@ -1,0 +1,22 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for AlterEstate API
+  version: 1.0.0
+extends: openapi/alterestate-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-network: https://apievangelist.com
+      x-apievangelist-artifacts:
+        authentication: authentication/alterestate-authentication.yml
+        scopes: scopes/alterestate-scopes.yml
+        conventions: conventions/alterestate-conventions.yml
+        errors: errors/alterestate-problem-types.yml
+        data_model: data-model/alterestate-data-model.yml
+        mcp: mcp/alterestate-mcp.yml
+  - target: $.info
+    update:
+      x-mcp-server: https://secure.alterestate.com/api/v1/alterai/mcp/
+  - target: "$.paths['/leads/'].post"
+    update:
+      x-apievangelist-note: Duplicate-contact dedup — a matching contact returns 200 (no new deal) instead of 201.

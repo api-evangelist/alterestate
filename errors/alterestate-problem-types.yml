@@ -1,0 +1,34 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/alterestate-openapi.yml
+format: http-status
+envelope: >-
+  AlterEstate returns standard HTTP status codes. Lead validation errors (400) return a JSON body
+  describing the failing fields; read endpoints signal errors with the status code alone. No
+  application/problem+json (RFC 9457) media type is documented.
+problems:
+  - status: 400
+    title: Bad Request
+    description: Validation error on lead submission (missing/invalid required fields).
+    source_operation: openapi/alterestate-openapi.yml#createLead
+    remediation: Ensure full_name, phone (E.164) and email are present and valid.
+  - status: 401
+    title: Unauthorized
+    description: Missing or invalid bearer token on the OAuth-protected MCP resource.
+    source_operation: mcp/alterestate-mcp.yml
+    remediation: Present a valid OAuth 2.0 bearer token with scope "mcp".
+  - status: 404
+    title: Not Found
+    description: Resource or endpoint not found (unknown slug or path).
+    source_operation: openapi/alterestate-openapi.yml#getProperty
+  - status: 500
+    title: Internal Server Error
+    description: Server error during processing.
+    source_operation: openapi/alterestate-openapi.yml#listProperties
+special_responses:
+  - status: 200
+    context: createLead
+    meaning: Duplicate contact exists; no new deal created. Custom fields still update the existing contact.
+  - status: 201
+    context: createLead
+    meaning: New lead created successfully.

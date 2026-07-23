@@ -1,0 +1,28 @@
+generated: '2026-07-17'
+method: searched
+source: https://dev.alterestate.com/ + openapi/alterestate-openapi.yml
+authentication:
+  read: 'aetoken header (public API token from dashboard Settings > Public API Token).'
+  write: 'Authorization: Token <api_key> for lead submission.'
+  agent: 'OAuth 2.0 bearer (scope mcp) for the hosted MCP server.'
+  ref: authentication/alterestate-authentication.yml
+idempotency:
+  supported: false
+  note: No idempotency-key header documented. Lead POST provides natural dedup — a duplicate contact returns 200 instead of creating a new deal, but this is contact-matching, not a client-supplied idempotency key.
+pagination:
+  style: unknown
+  note: List endpoints (properties/filter, agents, cities, sectors) return JSON arrays; no cursor/offset paging parameters are documented.
+currency_conversion:
+  supported: true
+  note: The properties/filter endpoint performs backend currency conversion. Query prices in USD, DOP, MXN, COP, CRC, GTQ or PEN via the currency parameter without manual conversion.
+error_envelope:
+  ref: errors/alterestate-problem-types.yml
+  note: Standard HTTP status codes; 400 returns field validation errors on lead submission.
+versioning:
+  ref: lifecycle/alterestate-lifecycle.yml
+  scheme: uri-path (v1)
+rate_limits:
+  note: Documentation references a Rate Limits section but publishes no numeric limits.
+trailing_slash:
+  required: true
+  note: All documented endpoints use trailing slashes (Django REST Framework style).

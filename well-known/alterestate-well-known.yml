@@ -1,0 +1,33 @@
+generated: '2026-07-17'
+method: searched
+source: live probes of /.well-known/ on AlterEstate hosts
+hosts:
+  - host: https://secure.alterestate.com
+    documents:
+      - path: /.well-known/oauth-authorization-server   # RFC 8414
+        status: 200
+        file: alterestate-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource      # RFC 9728
+        status: 200
+        file: alterestate-oauth-protected-resource.json
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://alterestate.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+  - host: https://dev.alterestate.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+notes: >-
+  The oauth-protected-resource points at resource https://secure.alterestate.com/api/v1/alterai/mcp/
+  with scope "mcp" — the OAuth-protected AlterEstate hosted MCP server. See mcp/alterestate-mcp.yml.

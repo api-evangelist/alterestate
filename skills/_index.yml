@@ -1,0 +1,12 @@
+generated: '2026-07-17'
+method: generated
+source: openapi/alterestate-openapi.yml
+skills:
+  - file: alterestate-capture-lead.md
+    name: Capture a real-estate lead into AlterEstate
+    api: openapi/alterestate-openapi.yml
+    operations: [createLead]
+  - file: alterestate-browse-listings.md
+    name: Browse AlterEstate property listings and project units
+    api: openapi/alterestate-openapi.yml
+    operations: [listProperties, getProperty, getBuildings, getUnits, listCities, listSectors]

@@ -1,0 +1,19 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/alterestate-openapi.yml + https://dev.alterestate.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://secure.alterestate.com/api/v1
+  docs: https://dev.alterestate.com/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No published deprecation/sunset policy found.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  AlterEstate does not publish a status page, formal SLA, deprecation policy or dated changelog on
+  its developer center as of this pass. Only the single stable v1 URI-path version is documented.

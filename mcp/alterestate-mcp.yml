@@ -1,0 +1,32 @@
+generated: '2026-07-17'
+method: searched
+status: published
+source: https://secure.alterestate.com/.well-known/oauth-protected-resource
+server:
+  name: alterestate-alterai
+  description: >-
+    Official AlterEstate hosted MCP server (branded "Brik"/alterai). Discovered via the
+    RFC 9728 protected-resource document. Requires an OAuth 2.0 bearer token (scope "mcp");
+    an unauthenticated POST returns 401 {"error":"Unauthorized","message":"Bearer token required"}.
+  transport: http
+  url: https://secure.alterestate.com/api/v1/alterai/mcp/
+  authorization:
+    type: oauth2
+    scheme: bearer
+    scopes: [mcp]
+    authorization_server: https://secure.alterestate.com
+    authorization_endpoint: https://secure.alterestate.com/oauth/authorize/
+    token_endpoint: https://secure.alterestate.com/oauth/token/
+    registration_endpoint: https://secure.alterestate.com/oauth/register/
+    code_challenge_methods_supported: [S256]
+evidence:
+  - source: https://secure.alterestate.com/.well-known/oauth-protected-resource
+    detail: 'resource = https://secure.alterestate.com/api/v1/alterai/mcp/, scopes_supported = [mcp]'
+  - source: https://secure.alterestate.com/.well-known/oauth-authorization-server
+    detail: 'scopes_supported = [mcp], grant_types = [authorization_code, refresh_token], PKCE S256'
+  - source: 'POST https://secure.alterestate.com/api/v1/alterai/mcp/'
+    detail: 'HTTP 401 Unauthorized — Bearer token required (server is live, auth-gated)'
+tools: []
+tools_note: >-
+  Tool list is behind OAuth and could not be enumerated without an account token. The server is
+  confirmed live and published; tools are not fabricated here.

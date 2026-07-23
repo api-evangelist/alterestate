@@ -1,0 +1,211 @@
+openapi: 3.1.0
+info:
+  title: AlterEstate Agents Properties API
+  version: v1
+  description: 'Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).'
+  contact:
+    name: AlterEstate Engineering
+    email: engineering@alterestate.com
+    url: https://dev.alterestate.com/
+  termsOfService: https://alterestate.com/terminos-condiciones
+servers:
+- url: https://secure.alterestate.com/api/v1
+  description: Production
+tags:
+- name: Properties
+  description: Property listings and detail views
+paths:
+  /properties/filter/:
+    get:
+      operationId: listProperties
+      summary: List all properties
+      description: Returns filtered property listings. Supports backend currency conversion across USD, DOP, MXN, COP, CRC, GTQ and PEN so prices can be queried in any supported currency.
+      tags:
+      - Properties
+      security:
+      - aetoken: []
+      parameters:
+      - name: search
+        in: query
+        schema:
+          type: string
+      - name: city
+        in: query
+        schema:
+          type: integer
+      - name: city_name
+        in: query
+        schema:
+          type: string
+      - name: sector
+        in: query
+        schema:
+          type: integer
+      - name: province
+        in: query
+        schema:
+          type: integer
+      - name: listing_type
+        in: query
+        schema:
+          type: string
+      - name: category
+        in: query
+        schema:
+          type: string
+      - name: currency
+        in: query
+        schema:
+          type: string
+      - name: rooms
+        in: query
+        schema:
+          type: integer
+      - name: bathrooms
+        in: query
+        schema:
+          type: number
+      - name: parking
+        in: query
+        schema:
+          type: integer
+      - name: area
+        in: query
+        schema:
+          type: number
+      - name: agent
+        in: query
+        schema:
+          type: integer
+      - name: ordering
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of properties.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Property'
+        '404':
+          description: Resource or endpoint not found.
+        '500':
+          description: Server error during processing.
+  /properties/view/{property_slug}/:
+    get:
+      operationId: getProperty
+      summary: Property detail view
+      description: Retrieve the detail view of a property including assigned agent, photo gallery, amenities and more.
+      tags:
+      - Properties
+      security:
+      - aetoken: []
+      parameters:
+      - name: property_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Property detail.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertyDetail'
+        '404':
+          description: Resource not found.
+        '500':
+          description: Server error during processing.
+components:
+  schemas:
+    PropertyDetail:
+      allOf:
+      - $ref: '#/components/schemas/Property'
+      - type: object
+        properties:
+          agent:
+            $ref: '#/components/schemas/Agent'
+          amenities:
+            type: array
+            items:
+              type: string
+          gallery:
+            type: array
+            items:
+              type: string
+              format: uri
+    Property:
+      type: object
+      description: Summary of a property listing.
+      properties:
+        uid:
+          type: string
+        slug:
+          type: string
+        name:
+          type: string
+        listing_type:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+        currency:
+          type: string
+        rooms:
+          type: integer
+        bathrooms:
+          type: number
+        parking:
+          type: integer
+        area:
+          type: number
+        city_name:
+          type: string
+        sector:
+          type: string
+        province:
+          type: string
+    Agent:
+      type: object
+      properties:
+        id:
+          type: integer
+        full_name:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        active:
+          type: boolean
+  securitySchemes:
+    aetoken:
+      type: apiKey
+      in: header
+      name: aetoken
+      description: Public API token from the AlterEstate dashboard (Settings > Public API Token, admin access). Used for read endpoints.
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Account API key sent as: Authorization: Token <api_key>. Used for lead submission.'
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authorization used by the AlterEstate (Brik/alterai) hosted MCP server.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://secure.alterestate.com/oauth/authorize/
+          tokenUrl: https://secure.alterestate.com/oauth/token/
+          refreshUrl: https://secure.alterestate.com/oauth/token/
+          scopes:
+            mcp: Access the AlterEstate hosted MCP server (secure.alterestate.com/api/v1/alterai/mcp/).
+x-apievangelist-generated: '2026-07-17'
+x-apievangelist-method: generated
+x-apievangelist-source: https://dev.alterestate.com/ (AlterEstate Developers Center, per-operation .md docs)
+x-apievangelist-note: AlterEstate publishes human documentation at dev.alterestate.com but no machine-readable OpenAPI. This description is generated faithfully from the documented operations, paths, methods, auth headers and status codes. Field-level schemas are approximate summaries of the documented response objects, not an authoritative provider contract.

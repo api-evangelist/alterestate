@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/alterestate-openapi.yml + /.well-known/ probes
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: OAuth 2.0 authorization server + protected-resource well-known documents (scope "mcp"), authorizationCode grant with PKCE S256.
+  - id: rfc8414-oauth-authorization-server-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 with issuer/endpoints.
+  - id: rfc9728-oauth-protected-resource-metadata
+    conforms: true
+    evidence: /.well-known/oauth-protected-resource returns 200 identifying the MCP resource.
+  - id: pkce-rfc7636
+    conforms: true
+    evidence: code_challenge_methods_supported = [S256].
+  - id: mcp
+    conforms: true
+    evidence: Hosted Model Context Protocol server at /api/v1/alterai/mcp/.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json responses documented.
+  - id: openidconnect
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404.

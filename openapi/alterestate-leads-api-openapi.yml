@@ -1,0 +1,148 @@
+openapi: 3.1.0
+info:
+  title: AlterEstate Agents Leads API
+  version: v1
+  description: 'Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).'
+  contact:
+    name: AlterEstate Engineering
+    email: engineering@alterestate.com
+    url: https://dev.alterestate.com/
+  termsOfService: https://alterestate.com/terminos-condiciones
+servers:
+- url: https://secure.alterestate.com/api/v1
+  description: Production
+tags:
+- name: Leads
+  description: Inbound lead submission into the CRM
+paths:
+  /leads/:
+    post:
+      operationId: createLead
+      summary: Create a lead
+      description: Submit a lead directly into an AlterEstate account. Duplicate contacts return 200 with no new deal created (custom fields still update the existing contact); new leads return 201.
+      tags:
+      - Leads
+      security:
+      - tokenAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeadRequest'
+      responses:
+        '201':
+          description: New lead created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lead'
+        '200':
+          description: Duplicate contact exists; no new deal created. Custom fields updated on existing contact.
+        '400':
+          description: Bad Request (validation errors).
+components:
+  schemas:
+    Lead:
+      type: object
+      properties:
+        full_name:
+          type: string
+        phone:
+          type: string
+          description: Normalized to E.164
+        email:
+          type: string
+          format: email
+          description: Stored lowercased
+        property_uid:
+          type: string
+        notes:
+          type: string
+        via:
+          type: string
+        related:
+          type: string
+        round_robin:
+          type: boolean
+        listing_type:
+          type: string
+        currency:
+          type: string
+        budget:
+          type: number
+    LeadRequest:
+      type: object
+      required:
+      - full_name
+      - phone
+      - email
+      properties:
+        full_name:
+          type: string
+        phone:
+          type: string
+          description: Normalized to E.164 format
+        email:
+          type: string
+          format: email
+          description: Stored lowercased
+        property_uid:
+          type: string
+        notes:
+          type: string
+        via:
+          type: string
+        related:
+          type: string
+        round_robin:
+          type: boolean
+        listing_type:
+          type: string
+        currency:
+          type: string
+        budget:
+          type: number
+        utm_source:
+          type: string
+        utm_campaign:
+          type: string
+        adset_name:
+          type: string
+        campaign_name:
+          type: string
+        form_name:
+          type: string
+        platform:
+          type: string
+        custom_fields:
+          type: object
+          additionalProperties: true
+        metadata:
+          type: object
+          additionalProperties: true
+  securitySchemes:
+    aetoken:
+      type: apiKey
+      in: header
+      name: aetoken
+      description: Public API token from the AlterEstate dashboard (Settings > Public API Token, admin access). Used for read endpoints.
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'Account API key sent as: Authorization: Token <api_key>. Used for lead submission.'
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authorization used by the AlterEstate (Brik/alterai) hosted MCP server.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://secure.alterestate.com/oauth/authorize/
+          tokenUrl: https://secure.alterestate.com/oauth/token/
+          refreshUrl: https://secure.alterestate.com/oauth/token/
+          scopes:
+            mcp: Access the AlterEstate hosted MCP server (secure.alterestate.com/api/v1/alterai/mcp/).
+x-apievangelist-generated: '2026-07-17'
+x-apievangelist-method: generated
+x-apievangelist-source: https://dev.alterestate.com/ (AlterEstate Developers Center, per-operation .md docs)
+x-apievangelist-note: AlterEstate publishes human documentation at dev.alterestate.com but no machine-readable OpenAPI. This description is generated faithfully from the documented operations, paths, methods, auth headers and status codes. Field-level schemas are approximate summaries of the documented response objects, not an authoritative provider contract.

@@ -1,0 +1,59 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/alterestate-openapi.yml
+entities:
+  - name: Property
+    id: uid / slug
+    description: A real-estate listing (sale/rent), with pricing, features, location and assigned agent.
+  - name: PropertyDetail
+    description: Full property view including agent, gallery and amenities.
+  - name: Development
+    description: A real-estate project composed of buildings and units. Addressed by project_slug.
+  - name: Building
+    id: id / uid
+    description: A building within a development project.
+  - name: Unit
+    description: A sellable unit within a building (model, floor, area, price).
+  - name: Agent
+    id: id
+    description: A company agent, assignable to properties and leads.
+  - name: City
+    id: id
+    description: A city; carries a nested Province.
+  - name: Sector
+    id: id
+    description: A neighborhood-level sector within a city; carries a nested Province.
+  - name: Province
+    id: id
+    description: A province/state; nested inside City and Sector.
+  - name: Lead
+    description: An inbound lead/contact submitted into the CRM; may reference a property.
+relationships:
+  - from: Building
+    to: Development
+    kind: belongs_to
+    via: project
+  - from: Unit
+    to: Building
+    kind: belongs_to
+    via: building
+  - from: PropertyDetail
+    to: Agent
+    kind: has_one
+    via: agent
+  - from: City
+    to: Province
+    kind: has_one
+    via: province
+  - from: Sector
+    to: City
+    kind: belongs_to
+    via: city_name
+  - from: Sector
+    to: Province
+    kind: has_one
+    via: province
+  - from: Lead
+    to: Property
+    kind: belongs_to
+    via: property_uid

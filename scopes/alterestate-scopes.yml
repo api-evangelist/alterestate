@@ -1,0 +1,19 @@
+generated: '2026-07-17'
+method: searched
+source: openapi/alterestate-openapi.yml
+docs: https://secure.alterestate.com/.well-known/oauth-authorization-server
+schemes:
+- name: oauth2
+  source: openapi/alterestate-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://secure.alterestate.com/oauth/authorize/
+    tokenUrl: https://secure.alterestate.com/oauth/token/
+  description: OAuth 2.0 authorization used by the AlterEstate (Brik/alterai) hosted MCP server.
+scopes:
+- scope: mcp
+  description: Access the AlterEstate hosted MCP server (secure.alterestate.com/api/v1/alterai/mcp/).
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/alterestate-openapi.yml

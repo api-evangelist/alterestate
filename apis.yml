@@ -1,25 +1,186 @@
 aid: alterestate
-name: Alterestate
-description: Alterestate is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: AlterEstate
+description: >-
+  AlterEstate is the leading real-estate CRM SaaS for agents across Latin America, serving more
+  than 5,000 agents in seven countries. Its platform centralizes leads, properties and sales in a
+  visual funnel and adds a WhatsApp-integrated AI assistant (Brik), a no-code website builder, a
+  unified inbox, an inter-agency inventory network, and a marketing hub. AlterEstate exposes a
+  public REST API at secure.alterestate.com/api/v1 covering property listings (with backend
+  currency conversion across USD, DOP, MXN, COP, CRC, GTQ and PEN), project developments
+  (buildings and units), agents, geographic locations, and inbound lead submission, plus an
+  OAuth-protected hosted MCP server for agentic access. Backed by 500 Global.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://alterestate.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-developer-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Real Estate
+- CRM
+- Property Management
+- Lead Management
+- Latin America
+- SaaS
+- Artificial Intelligence
+- MCP
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: alterestate:alterestate-agents-api
+  name: AlterEstate Agents API
+  description: Company agents
+  humanURL: https://dev.alterestate.com/
+  baseURL: https://secure.alterestate.com/api/v1
+  tags:
+  - Agents
+  properties:
+  - type: OpenAPI
+    url: openapi/alterestate-agents-api-openapi.yml
+  - type: Documentation
+    url: https://dev.alterestate.com/
+  - type: APIReference
+    url: https://dev.alterestate.com/properties
+  - type: GettingStarted
+    url: https://dev.alterestate.com/
+- aid: alterestate:alterestate-developments-api
+  name: AlterEstate Developments API
+  description: Real-estate projects, their buildings and units
+  humanURL: https://dev.alterestate.com/
+  baseURL: https://secure.alterestate.com/api/v1
+  tags:
+  - Developments
+  properties:
+  - type: OpenAPI
+    url: openapi/alterestate-developments-api-openapi.yml
+  - type: Documentation
+    url: https://dev.alterestate.com/
+  - type: APIReference
+    url: https://dev.alterestate.com/properties
+  - type: GettingStarted
+    url: https://dev.alterestate.com/
+- aid: alterestate:alterestate-leads-api
+  name: AlterEstate Leads API
+  description: Inbound lead submission into the CRM
+  humanURL: https://dev.alterestate.com/
+  baseURL: https://secure.alterestate.com/api/v1
+  tags:
+  - Leads
+  properties:
+  - type: OpenAPI
+    url: openapi/alterestate-leads-api-openapi.yml
+  - type: Documentation
+    url: https://dev.alterestate.com/
+  - type: APIReference
+    url: https://dev.alterestate.com/properties
+  - type: GettingStarted
+    url: https://dev.alterestate.com/
+- aid: alterestate:alterestate-locations-api
+  name: AlterEstate Locations API
+  description: Cities, sectors and provinces
+  humanURL: https://dev.alterestate.com/
+  baseURL: https://secure.alterestate.com/api/v1
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/alterestate-locations-api-openapi.yml
+  - type: Documentation
+    url: https://dev.alterestate.com/
+  - type: APIReference
+    url: https://dev.alterestate.com/properties
+  - type: GettingStarted
+    url: https://dev.alterestate.com/
+- aid: alterestate:alterestate-properties-api
+  name: AlterEstate Properties API
+  description: Property listings and detail views
+  humanURL: https://dev.alterestate.com/
+  baseURL: https://secure.alterestate.com/api/v1
+  tags:
+  - Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/alterestate-properties-api-openapi.yml
+  - type: Documentation
+    url: https://dev.alterestate.com/
+  - type: APIReference
+    url: https://dev.alterestate.com/properties
+  - type: GettingStarted
+    url: https://dev.alterestate.com/
 common:
+- type: DeveloperPortal
+  url: https://dev.alterestate.com/
+- type: Documentation
+  url: https://dev.alterestate.com/
+- type: APIReference
+  url: https://dev.alterestate.com/properties
+- type: Authentication
+  url: authentication/alterestate-authentication.yml
+- type: OAuthScopes
+  url: scopes/alterestate-scopes.yml
+- type: MCPServer
+  url: mcp/alterestate-mcp.yml
+- type: WellKnown
+  url: well-known/alterestate-well-known.yml
+- type: LLMsTxt
+  url: llms/alterestate-llms.txt
+- type: Overlay
+  url: overlays/alterestate-overlay.yaml
+- type: Conventions
+  url: conventions/alterestate-conventions.yml
+- type: ErrorCatalog
+  url: errors/alterestate-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/alterestate-lifecycle.yml
+- type: Conformance
+  url: conformance/alterestate-conformance.yml
+- type: DataModel
+  url: data-model/alterestate-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/alterestate-domain-security.yml
+- type: Blog
+  url: https://alterestate.com/blog
+- type: HelpCenter
+  url: https://ayuda.alterestate.com
+- type: Support
+  url: https://ayuda.alterestate.com
+- type: Pricing
+  url: https://alterestate.com/precios
+- type: SignUp
+  url: https://app.alterestate.com/registro
+- type: Login
+  url: https://app.alterestate.com/
+- type: TermsOfService
+  url: https://alterestate.com/terminos-condiciones
+- type: PrivacyPolicy
+  url: https://alterestate.com/politica-de-privacidad
 - type: Website
   url: https://alterestate.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

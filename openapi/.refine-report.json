@@ -1,0 +1,22 @@
+{
+  "provider": "alterestate",
+  "sources": [
+    "alterestate-agents-api-openapi.yml",
+    "alterestate-developments-api-openapi.yml",
+    "alterestate-leads-api-openapi.yml",
+    "alterestate-locations-api-openapi.yml",
+    "alterestate-properties-api-openapi.yml"
+  ],
+  "outputs": [
+    "alterestate-agents-api-openapi.yml",
+    "alterestate-developments-api-openapi.yml",
+    "alterestate-leads-api-openapi.yml",
+    "alterestate-locations-api-openapi.yml",
+    "alterestate-properties-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
