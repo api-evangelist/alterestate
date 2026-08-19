@@ -1,0 +1,208 @@
+{
+  "item": [
+    {
+      "id": "3c976e33-d0a9-4dce-8f86-1b76fba29f4f",
+      "name": "Agents",
+      "description": {
+        "content": "Company agents",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9323a680-306d-44e8-b13a-8f6129405e19",
+          "name": "List agents",
+          "request": {
+            "name": "List agents",
+            "description": {
+              "content": "Returns a JSON array containing all active agents in the company.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "agents",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "aetoken"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "57d441da-be2c-441c-8051-93fd4ce86928",
+              "name": "A list of agents.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 134,\n    \"full_name\": \"string\",\n    \"email\": \"41bMkzaBeq19Nl@MOExnJcMgndY.lho\",\n    \"phone\": \"string\",\n    \"active\": false\n  },\n  {\n    \"id\": 5056,\n    \"full_name\": \"string\",\n    \"email\": \"KGGZNC2rRt@BrbzsMxBDPVP.rj\",\n    \"phone\": \"string\",\n    \"active\": false\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "acacd22a-38f6-429f-97da-cbe061b48e3a",
+              "name": "Endpoint does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "abc9eec9-02b1-4404-9a7d-7a12e43e2eca",
+              "name": "Server processing error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secure.alterestate.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "02b4dd48-7f8a-4aa9-8742-cd3f7bfed73a",
+    "name": "AlterEstate Agents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).\n\nContact Support:\n Name: AlterEstate Engineering\n Email: engineering@alterestate.com",
+      "type": "text/plain"
+    }
+  }
+}

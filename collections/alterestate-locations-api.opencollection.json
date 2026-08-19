@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AlterEstate Agents Locations API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List cities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/cities/",
+            "params": [
+              {
+                "name": "country",
+                "value": "",
+                "type": "query",
+                "description": "Country ID (10 countries supported)."
+              }
+            ]
+          },
+          "docs": "List cities, optionally filtered by country. Provinces are nested in each city."
+        },
+        {
+          "info": {
+            "name": "List sectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/sectors/",
+            "params": [
+              {
+                "name": "city",
+                "value": "",
+                "type": "query",
+                "description": "City ID to filter sectors."
+              }
+            ]
+          },
+          "docs": "List neighborhood-level sectors within a city."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

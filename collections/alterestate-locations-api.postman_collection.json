@@ -1,0 +1,200 @@
+{
+  "item": [
+    {
+      "id": "2446c090-8a61-4530-8f2d-76861321b9cb",
+      "name": "Locations",
+      "description": {
+        "content": "Cities, sectors and provinces",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dc233296-aba3-4ee4-931d-6ddd5055fe48",
+          "name": "List cities",
+          "request": {
+            "name": "List cities",
+            "description": {
+              "content": "List cities, optionally filtered by country. Provinces are nested in each city.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cities",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<integer>",
+                  "description": "Country ID (10 countries supported)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67aef322-fc27-4317-837b-3b3dfb1028e1",
+              "name": "A list of cities.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cities",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "country",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 9683,\n    \"name\": \"string\",\n    \"province\": {\n      \"id\": 9345,\n      \"name\": \"string\"\n    }\n  },\n  {\n    \"id\": 858,\n    \"name\": \"string\",\n    \"province\": {\n      \"id\": 1532,\n      \"name\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7537ad6b-3db0-4b38-9807-8a2bcfcbfc4a",
+          "name": "List sectors",
+          "request": {
+            "name": "List sectors",
+            "description": {
+              "content": "List neighborhood-level sectors within a city.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "sectors",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<integer>",
+                  "description": "City ID to filter sectors."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2313dafb-a7e0-4b3a-8d3b-78cead64888e",
+              "name": "A list of sectors.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sectors",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 5147,\n    \"name\": \"string\",\n    \"city_name\": \"string\",\n    \"province\": {\n      \"id\": 4900,\n      \"name\": \"string\"\n    }\n  },\n  {\n    \"id\": 6064,\n    \"name\": \"string\",\n    \"city_name\": \"string\",\n    \"province\": {\n      \"id\": 5548,\n      \"name\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secure.alterestate.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "83ca06ab-389c-4889-9e49-6f112d376e54",
+    "name": "AlterEstate Agents Locations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).\n\nContact Support:\n Name: AlterEstate Engineering\n Email: engineering@alterestate.com",
+      "type": "text/plain"
+    }
+  }
+}

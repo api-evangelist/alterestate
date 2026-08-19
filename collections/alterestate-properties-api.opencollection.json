@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AlterEstate Agents Properties API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Properties",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/properties/filter/",
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "city_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sector",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "province",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "listing_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "currency",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "rooms",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bathrooms",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "parking",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "area",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "agent",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ordering",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "aetoken",
+              "value": "{{aetoken}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Returns filtered property listings. Supports backend currency conversion across USD, DOP, MXN, COP, CRC, GTQ and PEN so prices can be queried in any supported currency."
+        },
+        {
+          "info": {
+            "name": "Property detail view",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/properties/view/:property_slug/",
+            "params": [
+              {
+                "name": "property_slug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "aetoken",
+              "value": "{{aetoken}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Retrieve the detail view of a property including assigned agent, photo gallery, amenities and more."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

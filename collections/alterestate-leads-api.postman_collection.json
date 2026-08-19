@@ -1,0 +1,245 @@
+{
+  "item": [
+    {
+      "id": "87862cda-5992-4855-903e-6a829d674456",
+      "name": "Leads",
+      "description": {
+        "content": "Inbound lead submission into the CRM",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1c33bcb6-b4d0-426d-b088-1efb6c221fb8",
+          "name": "Create a lead",
+          "request": {
+            "name": "Create a lead",
+            "description": {
+              "content": "Submit a lead directly into an AlterEstate account. Duplicate contacts return 200 with no new deal created (custom fields still update the existing contact); new leads return 201.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "leads",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<email>\",\n  \"property_uid\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"via\": \"<string>\",\n  \"related\": \"<string>\",\n  \"round_robin\": \"<boolean>\",\n  \"listing_type\": \"<string>\",\n  \"currency\": \"<string>\",\n  \"budget\": \"<number>\",\n  \"utm_source\": \"<string>\",\n  \"utm_campaign\": \"<string>\",\n  \"adset_name\": \"<string>\",\n  \"campaign_name\": \"<string>\",\n  \"form_name\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"custom_fields\": {\n    \"key_0\": true\n  },\n  \"metadata\": {\n    \"key_0\": 8039.874253093026\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "27229f37-647a-486d-96e3-a8f47b896744",
+              "name": "Duplicate contact exists; no new deal created. Custom fields updated on existing contact.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"full_name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<email>\",\n  \"property_uid\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"via\": \"<string>\",\n  \"related\": \"<string>\",\n  \"round_robin\": \"<boolean>\",\n  \"listing_type\": \"<string>\",\n  \"currency\": \"<string>\",\n  \"budget\": \"<number>\",\n  \"utm_source\": \"<string>\",\n  \"utm_campaign\": \"<string>\",\n  \"adset_name\": \"<string>\",\n  \"campaign_name\": \"<string>\",\n  \"form_name\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"custom_fields\": {\n    \"key_0\": false\n  },\n  \"metadata\": {\n    \"key_0\": 9479\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e56ed745-6619-41bf-8c4d-21a1a32611c3",
+              "name": "New lead created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"full_name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<email>\",\n  \"property_uid\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"via\": \"<string>\",\n  \"related\": \"<string>\",\n  \"round_robin\": \"<boolean>\",\n  \"listing_type\": \"<string>\",\n  \"currency\": \"<string>\",\n  \"budget\": \"<number>\",\n  \"utm_source\": \"<string>\",\n  \"utm_campaign\": \"<string>\",\n  \"adset_name\": \"<string>\",\n  \"campaign_name\": \"<string>\",\n  \"form_name\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"custom_fields\": {\n    \"key_0\": false\n  },\n  \"metadata\": {\n    \"key_0\": 9479\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"full_name\": \"string\",\n  \"phone\": \"string\",\n  \"email\": \"Zp--XGmucZhi@eOFeeJSYl.clz\",\n  \"property_uid\": \"string\",\n  \"notes\": \"string\",\n  \"via\": \"string\",\n  \"related\": \"string\",\n  \"round_robin\": false,\n  \"listing_type\": \"string\",\n  \"currency\": \"string\",\n  \"budget\": 804.1801747224841\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf42babd-d9e8-4e17-8b7f-6f65acb2eb0c",
+              "name": "Bad Request (validation errors).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"full_name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<email>\",\n  \"property_uid\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"via\": \"<string>\",\n  \"related\": \"<string>\",\n  \"round_robin\": \"<boolean>\",\n  \"listing_type\": \"<string>\",\n  \"currency\": \"<string>\",\n  \"budget\": \"<number>\",\n  \"utm_source\": \"<string>\",\n  \"utm_campaign\": \"<string>\",\n  \"adset_name\": \"<string>\",\n  \"campaign_name\": \"<string>\",\n  \"form_name\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"custom_fields\": {\n    \"key_0\": false\n  },\n  \"metadata\": {\n    \"key_0\": 9479\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secure.alterestate.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "13f91228-a7a6-432e-9bd9-ae429883b0ec",
+    "name": "AlterEstate Agents Leads API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).\n\nContact Support:\n Name: AlterEstate Engineering\n Email: engineering@alterestate.com",
+      "type": "text/plain"
+    }
+  }
+}

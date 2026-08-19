@@ -1,0 +1,670 @@
+{
+  "item": [
+    {
+      "id": "0ff32224-0b65-4c3c-a3e6-8801a34f5bca",
+      "name": "Properties",
+      "description": {
+        "content": "Property listings and detail views",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cc910782-a244-4e48-b2de-6852a706767e",
+          "name": "List all properties",
+          "request": {
+            "name": "List all properties",
+            "description": {
+              "content": "Returns filtered property listings. Supports backend currency conversion across USD, DOP, MXN, COP, CRC, GTQ and PEN so prices can be queried in any supported currency.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "properties",
+                "filter",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "city_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sector",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "province",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "listing_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "currency",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "rooms",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "bathrooms",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "parking",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "area",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "agent",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ordering",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "aetoken"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a0f5c7fb-67d3-4127-b6e1-f77257271a8a",
+              "name": "A list of properties.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "filter",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "city_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sector",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "province",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "listing_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "rooms",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "bathrooms",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "parking",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "agent",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "ordering",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"uid\": \"string\",\n    \"slug\": \"string\",\n    \"name\": \"string\",\n    \"listing_type\": \"string\",\n    \"category\": \"string\",\n    \"price\": 947.1513096169115,\n    \"currency\": \"string\",\n    \"rooms\": 1826,\n    \"bathrooms\": 6455.753518796361,\n    \"parking\": 3354,\n    \"area\": 2117.783267612926,\n    \"city_name\": \"string\",\n    \"sector\": \"string\",\n    \"province\": \"string\"\n  },\n  {\n    \"uid\": \"string\",\n    \"slug\": \"string\",\n    \"name\": \"string\",\n    \"listing_type\": \"string\",\n    \"category\": \"string\",\n    \"price\": 2936.560901949216,\n    \"currency\": \"string\",\n    \"rooms\": 7429,\n    \"bathrooms\": 1577.5277026414735,\n    \"parking\": 4090,\n    \"area\": 5540.60320996419,\n    \"city_name\": \"string\",\n    \"sector\": \"string\",\n    \"province\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1067adfa-0447-42a7-a3ef-52bc3ad67c38",
+              "name": "Resource or endpoint not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "filter",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "city_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sector",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "province",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "listing_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "rooms",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "bathrooms",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "parking",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "agent",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "ordering",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c62822db-f262-4de8-884e-6a03edda5c66",
+              "name": "Server error during processing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "filter",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "city_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sector",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "province",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "listing_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "rooms",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "bathrooms",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "parking",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "area",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "agent",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "ordering",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "33f4dd7a-54eb-47b9-b928-d990e4f84ad3",
+          "name": "Property detail view",
+          "request": {
+            "name": "Property detail view",
+            "description": {
+              "content": "Retrieve the detail view of a property including assigned agent, photo gallery, amenities and more.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "properties",
+                "view",
+                ":property_slug",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "property_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "aetoken"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7ba7c257-e964-442e-b442-820b74dbf2f5",
+              "name": "Property detail.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "view",
+                    ":property_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "property_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"uid\": \"string\",\n  \"slug\": \"string\",\n  \"name\": \"string\",\n  \"listing_type\": \"string\",\n  \"category\": \"string\",\n  \"price\": 6080.373925896038,\n  \"currency\": \"string\",\n  \"rooms\": 6060,\n  \"bathrooms\": 4639.8263023938625,\n  \"parking\": 6681,\n  \"area\": 8396.750839695333,\n  \"city_name\": \"string\",\n  \"sector\": \"string\",\n  \"province\": \"string\",\n  \"agent\": {\n    \"id\": 9059,\n    \"full_name\": \"string\",\n    \"email\": \"oqVaShUzbfVNy-M@OCBUsJQJ.ndo\",\n    \"phone\": \"string\",\n    \"active\": true\n  },\n  \"amenities\": [\n    \"string\",\n    \"string\"\n  ],\n  \"gallery\": [\n    \"https://nMkhZvcCpgQKpTiuCPotnjmYMOeoX.qbZgSvL5k6\",\n    \"http://bToDWmaPaqChKcxvGyMD.bnWMKhxEDO42nkbzV\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "926b9b72-ee37-436a-b31d-7fbca3e6ab50",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "view",
+                    ":property_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "property_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8ed16cf8-72c5-4dcb-84d3-6f022ba57313",
+              "name": "Server error during processing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "view",
+                    ":property_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "property_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "aetoken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secure.alterestate.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b320ce9d-3888-41fc-aaeb-4a5086c6fa65",
+    "name": "AlterEstate Agents Properties API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).\n\nContact Support:\n Name: AlterEstate Engineering\n Email: engineering@alterestate.com",
+      "type": "text/plain"
+    }
+  }
+}

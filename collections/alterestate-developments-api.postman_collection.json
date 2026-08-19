@@ -1,0 +1,380 @@
+{
+  "item": [
+    {
+      "id": "2a9e9fe3-f438-4b95-894a-40a91d7abf44",
+      "name": "Developments",
+      "description": {
+        "content": "Real-estate projects, their buildings and units",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a020ce3d-e5ff-4398-b530-ed11073ed3bf",
+          "name": "Get buildings",
+          "request": {
+            "name": "Get buildings",
+            "description": {
+              "content": "Retrieve the buildings inside a real-estate project.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                "buildings",
+                ":project_slug",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "project_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "24bab4a8-a3ea-4957-b295-7b9f36e4a021",
+              "name": "A list of buildings.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    "buildings",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 103,\n    \"uid\": \"string\",\n    \"name\": \"string\",\n    \"order\": 8961,\n    \"visible\": true,\n    \"company\": 5428,\n    \"project\": 460,\n    \"created_at\": \"1987-06-15T13:27:45.011Z\",\n    \"updated_at\": \"1956-12-12T20:20:18.968Z\"\n  },\n  {\n    \"id\": 5554,\n    \"uid\": \"string\",\n    \"name\": \"string\",\n    \"order\": 469,\n    \"visible\": false,\n    \"company\": 2721,\n    \"project\": 8458,\n    \"created_at\": \"1999-01-05T03:39:21.559Z\",\n    \"updated_at\": \"2022-12-24T09:57:43.395Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ab28202c-7431-49e4-8d1a-9f53c170bead",
+              "name": "Resource or endpoint not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    "buildings",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "102b5f87-055f-421f-bc76-bd3bfff7286c",
+              "name": "Server processing failure.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    "buildings",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3aadbf3f-5291-478d-8d06-8c77779ede1f",
+          "name": "Get units",
+          "request": {
+            "name": "Get units",
+            "description": {
+              "content": "Retrieve the units of a project by requesting their slug.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "properties",
+                "public",
+                "units",
+                ":project_slug",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "project_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "643c9def-6237-4df1-8e84-2c6d7af303ef",
+              "name": "A list of units.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "public",
+                    "units",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"model\": \"string\",\n    \"floor\": 903,\n    \"area\": 439.3143610998396,\n    \"rooms\": 7011,\n    \"bathrooms\": 5287.72438610469,\n    \"parking\": 6877,\n    \"status\": \"string\",\n    \"sale_price\": 707.4815029330373,\n    \"building\": 9300,\n    \"floor_plan\": \"http://mnigRhWovqTcTXEeCuDMmUvZL.yydvrfvnd3RmdiSKa8yLuJH+TmCvQ3SIKUxLFyT-cZJ4DvyejrWKMpWKJ\"\n  },\n  {\n    \"model\": \"string\",\n    \"floor\": 4605,\n    \"area\": 448.9001156965633,\n    \"rooms\": 1969,\n    \"bathrooms\": 1399.081474945697,\n    \"parking\": 6131,\n    \"status\": \"string\",\n    \"sale_price\": 7923.649683411949,\n    \"building\": 8852,\n    \"floor_plan\": \"https://OLrTtYtjQuyAjBjTmmYfJEOU.tdsyFFYfKWeWYN43u5Evnj\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fde0c798-e878-46be-86a4-ca18b6062c08",
+              "name": "Resource or endpoint not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "public",
+                    "units",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6e74d047-ae39-47d5-8913-9f0485fc71e7",
+              "name": "Server processing failure.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "properties",
+                    "public",
+                    "units",
+                    ":project_slug",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secure.alterestate.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ae5b05e7-c8aa-4dcb-9ffa-3f69b2bfa974",
+    "name": "AlterEstate Agents Developments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public REST API for AlterEstate, the leading real-estate CRM SaaS for agents across Latin America. Exposes property listings, project developments (buildings and units), agents, geographic locations, and inbound lead submission. Read endpoints authenticate with a public API token (aetoken header); lead creation uses an account API key (Authorization: Token).\n\nContact Support:\n Name: AlterEstate Engineering\n Email: engineering@alterestate.com",
+      "type": "text/plain"
+    }
+  }
+}

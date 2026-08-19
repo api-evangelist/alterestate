@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AlterEstate Agents Developments API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Developments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get buildings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/projects/buildings/:project_slug/",
+            "params": [
+              {
+                "name": "project_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve the buildings inside a real-estate project."
+        },
+        {
+          "info": {
+            "name": "Get units",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://secure.alterestate.com/api/v1/properties/public/units/:project_slug/",
+            "params": [
+              {
+                "name": "project_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve the units of a project by requesting their slug."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

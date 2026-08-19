@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AlterEstate Agents Leads API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://secure.alterestate.com/api/v1/leads/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Submit a lead directly into an AlterEstate account. Duplicate contacts return 200 with no new deal created (custom fields still update the existing contact); new leads return 201."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
