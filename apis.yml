@@ -44,6 +44,9 @@ x-tier-reason: enriched-from-public-developer-surface
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-17'
+x-docs-platform: gitbook
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-09-17
 tags:
 - Company
 - Real-Estate
@@ -124,6 +127,8 @@ apis:
   humanURL: https://dev.alterestate.com/
   baseURL: https://secure.alterestate.com/api/v1
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
