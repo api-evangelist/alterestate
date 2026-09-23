@@ -1,11 +1,7 @@
 {
   "provider": "alterestate",
   "sources": [
-    "alterestate-agents-api-openapi.yml",
-    "alterestate-developments-api-openapi.yml",
-    "alterestate-leads-api-openapi.yml",
-    "alterestate-locations-api-openapi.yml",
-    "alterestate-properties-api-openapi.yml"
+    "_original/alterestate-openapi.yml"
   ],
   "outputs": [
     "alterestate-agents-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "alterestate-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "alterestate-agents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alterestate-developments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alterestate-leads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alterestate-locations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "alterestate-properties-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
