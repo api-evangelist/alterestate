@@ -49,7 +49,7 @@ x-docs-platform-confidence: high
 x-docs-platform-checked: 2026-09-17
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - CRM
 - Property Management
 - Lead Management
@@ -67,6 +67,7 @@ tags_raw:
 - SaaS
 - Artificial Intelligence
 - MCP
+- Real-Estate
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

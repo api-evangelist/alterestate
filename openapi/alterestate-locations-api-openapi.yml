@@ -61,17 +61,6 @@ paths:
                   $ref: '#/components/schemas/Sector'
 components:
   schemas:
-    Sector:
-      type: object
-      properties:
-        id:
-          type: integer
-        name:
-          type: string
-        city_name:
-          type: string
-        province:
-          $ref: '#/components/schemas/Province'
     Province:
       type: object
       properties:
@@ -85,6 +74,17 @@ components:
         id:
           type: integer
         name:
+          type: string
+        province:
+          $ref: '#/components/schemas/Province'
+    Sector:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        city_name:
           type: string
         province:
           $ref: '#/components/schemas/Province'
