@@ -69,29 +69,6 @@ paths:
           description: Server processing failure.
 components:
   schemas:
-    Building:
-      type: object
-      properties:
-        id:
-          type: integer
-        uid:
-          type: string
-        name:
-          type: string
-        order:
-          type: integer
-        visible:
-          type: boolean
-        company:
-          type: integer
-        project:
-          type: integer
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
     Unit:
       type: object
       properties:
@@ -116,6 +93,29 @@ components:
         floor_plan:
           type: string
           format: uri
+    Building:
+      type: object
+      properties:
+        id:
+          type: integer
+        uid:
+          type: string
+        name:
+          type: string
+        order:
+          type: integer
+        visible:
+          type: boolean
+        company:
+          type: integer
+        project:
+          type: integer
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
   securitySchemes:
     aetoken:
       type: apiKey
