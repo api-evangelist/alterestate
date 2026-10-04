@@ -122,22 +122,6 @@ paths:
           description: Server error during processing.
 components:
   schemas:
-    PropertyDetail:
-      allOf:
-      - $ref: '#/components/schemas/Property'
-      - type: object
-        properties:
-          agent:
-            $ref: '#/components/schemas/Agent'
-          amenities:
-            type: array
-            items:
-              type: string
-          gallery:
-            type: array
-            items:
-              type: string
-              format: uri
     Property:
       type: object
       description: Summary of a property listing.
@@ -170,6 +154,22 @@ components:
           type: string
         province:
           type: string
+    PropertyDetail:
+      allOf:
+      - $ref: '#/components/schemas/Property'
+      - type: object
+        properties:
+          agent:
+            $ref: '#/components/schemas/Agent'
+          amenities:
+            type: array
+            items:
+              type: string
+          gallery:
+            type: array
+            items:
+              type: string
+              format: uri
     Agent:
       type: object
       properties:

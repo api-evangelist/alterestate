@@ -43,34 +43,6 @@ paths:
           description: Bad Request (validation errors).
 components:
   schemas:
-    Lead:
-      type: object
-      properties:
-        full_name:
-          type: string
-        phone:
-          type: string
-          description: Normalized to E.164
-        email:
-          type: string
-          format: email
-          description: Stored lowercased
-        property_uid:
-          type: string
-        notes:
-          type: string
-        via:
-          type: string
-        related:
-          type: string
-        round_robin:
-          type: boolean
-        listing_type:
-          type: string
-        currency:
-          type: string
-        budget:
-          type: number
     LeadRequest:
       type: object
       required:
@@ -121,6 +93,34 @@ components:
         metadata:
           type: object
           additionalProperties: true
+    Lead:
+      type: object
+      properties:
+        full_name:
+          type: string
+        phone:
+          type: string
+          description: Normalized to E.164
+        email:
+          type: string
+          format: email
+          description: Stored lowercased
+        property_uid:
+          type: string
+        notes:
+          type: string
+        via:
+          type: string
+        related:
+          type: string
+        round_robin:
+          type: boolean
+        listing_type:
+          type: string
+        currency:
+          type: string
+        budget:
+          type: number
   securitySchemes:
     aetoken:
       type: apiKey

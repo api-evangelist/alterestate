@@ -68,15 +68,6 @@ components:
           type: integer
         name:
           type: string
-    City:
-      type: object
-      properties:
-        id:
-          type: integer
-        name:
-          type: string
-        province:
-          $ref: '#/components/schemas/Province'
     Sector:
       type: object
       properties:
@@ -85,6 +76,15 @@ components:
         name:
           type: string
         city_name:
+          type: string
+        province:
+          $ref: '#/components/schemas/Province'
+    City:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
           type: string
         province:
           $ref: '#/components/schemas/Province'
