@@ -157,6 +157,8 @@ apis:
   - type: GettingStarted
     url: https://dev.alterestate.com/
 common:
+- type: Plans
+  url: plans/alterestate-plans-pricing.yml
 - type: DeveloperPortal
   url: https://dev.alterestate.com/
 - type: Documentation
