@@ -1,0 +1,60 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://alterestate.com/do/precios
+sources:
+- https://alterestate.com/do/precios
+- https://alterestate.com/precios
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Página de precios en español; plan Inmobiliarios con tarifa base más usuarios adicionales, descuento
+  'Ahorra 20%' en pago anual; plan Desarrolladores sin precio numérico. Prueba gratuita de 7 días.
+plan_count: 2
+currency: USD
+plans:
+- name: Inmobiliarios
+  price_text: $49 USD/mes
+  price: 49
+  currency: USD
+  period: month
+  unit: base fee + per user
+  included_quota: 1 usuario
+  overage: $49 base + $20/usuario adicional
+- name: Desarrolladores
+  price_text: Precios basados en el número de unidades en tus proyectos.
+  period: none
+  unit: unidades
+  included_quota: 'TODO LO DE AGENTES, MÁS: Panel de múltiples proyectos, etc.'
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Inmobiliarios
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Desarrolladores
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods:
+    - none
