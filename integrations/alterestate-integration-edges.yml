@@ -1,0 +1,232 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/alterestate/integrations
+checked:
+- https://composio.dev/toolkits/alterestate
+- https://monid.ai/tools/alterestate
+- https://n8n.io/integrations/alterestate/
+- https://zapier.com/apps/alterestate/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: alterestate
+  url: https://zapier.com/apps/alterestate/integrations
+  external_url: https://alterestate.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: form_response
+    label: New Form Entry
+  - key: new_lead_on_round_robin
+    label: New Lead on Round Robin
+  actions:
+  - key: new_lead
+    label: New Deal
+  searches: []
+edges:
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Facebook Conversions
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/facebook-conversions
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://developers.facebook.com/docs/marketing-api/server-side-api/guides/zapier-integration
+- partner_name: Facebook Messenger
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/facebook-messenger
+  direction: third-party
+  category: Facebook
+  partner_url: https://www.messenger.com/
+- partner_name: ChatGPT (OpenAI)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/chatgpt
+  direction: third-party
+  category: AI Assistants
+  partner_url: https://chat.openai.com/chat
+- partner_name: Anthropic (Claude)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/anthropic-claude
+  direction: third-party
+  category: AI Models
+  partner_url: https://www.anthropic.com/
+- partner_name: SQL Server
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/sql-server
+  direction: third-party
+  category: Databases
+  partner_url: https://www.microsoft.com/sql-server
+- partner_name: Webflow
+  partner: webflow
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/webflow
+  direction: third-party
+  category: Website Builders
+  partner_url: https://webflow.com/
+- partner_name: Skool
+  partner: skool
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/skool
+  direction: third-party
+  category: Education
+  partner_url: https://skool.com/
+- partner_name: Netlify
+  partner: netlify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/netlify
+  direction: third-party
+  category: Website Builders
+  partner_url: https://www.netlify.com/
+- partner_name: Lofty
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/lofty
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://lofty.com/
+- partner_name: Zoho Books
+  partner: zoho-books
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/zoho-books
+  direction: third-party
+  category: Accounting
+  partner_url: https://go.zoho.com/3Al
+- partner_name: respond.io
+  partner: respond
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/respondio
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://respond.io/?utm_source=zapier&utm_medium=zapier+integration+page&utm_campaign=zapier_respondio
+- partner_name: Clientify
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/clientify
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://academia.clientify.com/
+templates:
+- title: Create new deals in AlterEstate from new leads in Facebook Lead Ads
+  url: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1202374/create-new-deals-in-alterestate-from-new-leads-in-facebook-lead-ads
+  apps:
+  - facebook-lead-ads
+  - alterestate
+- title: Update Mailchimp subscribers with new AlterEstate round robin leads
+  url: https://zapier.com/apps/alterestate/integrations/mailchimp/1684176/update-mailchimp-subscribers-with-new-alterestate-round-robin-leads
+  apps:
+  - alterestate
+  - mailchimp
+- title: Send a WhatsApp Notifications message for every new lead on round robin in AlterEstate
+  url: https://zapier.com/apps/alterestate/integrations/whatsapp-notifications/1628483/send-a-whatsapp-notifications-message-for-every-new-lead-on-round-robin-in-alterestate
+  apps:
+  - alterestate
+  - whatsapp-notifications
+- title: Create new AlterEstate deals from Facebook Messenger page messages
+  url: https://zapier.com/apps/alterestate/integrations/facebook-messenger/1254451/create-new-alterestate-deals-from-facebook-messenger-page-messages
+  apps:
+  - facebook-messenger
+  - alterestate
+- title: New Deal in AlterEstate for new lead form entries in Google Ads
+  url: https://zapier.com/apps/alterestate/integrations/google-ads/1007097/new-deal-in-alterestate-for-new-lead-form-entries-in-google-ads
+  apps:
+  - google-ads
+  - alterestate
+- title: Create HubSpot contacts from new AlterEstate form entries
+  url: https://zapier.com/apps/alterestate/integrations/hubspot/1389565/create-hubspot-contacts-from-new-alterestate-form-entries
+  apps:
+  - alterestate
+  - hubspot
+- title: Add or update Brevo contacts for new leads on round robin in AlterEstate
+  url: https://zapier.com/apps/alterestate/integrations/brevo/255636003/add-or-update-brevo-contacts-for-new-leads-on-round-robin-in-alterestate
+  apps:
+  - alterestate
+  - brevo
+- title: Create new AlterEstate deals when Mailchimp emails are opened
+  url: https://zapier.com/apps/alterestate/integrations/mailchimp/1392018/create-new-alterestate-deals-when-mailchimp-emails-are-opened
+  apps:
+  - mailchimp
+  - alterestate
+- title: Create new Mailchimp subscribers from new form entries in AlterEstate
+  url: https://zapier.com/apps/alterestate/integrations/mailchimp/1703683/create-new-mailchimp-subscribers-from-new-form-entries-in-alterestate
+  apps:
+  - alterestate
+  - mailchimp
+- title: Send WhatsApp Notifications messages for new AlterEstate form entries
+  url: https://zapier.com/apps/alterestate/integrations/whatsapp-notifications/1766053/send-whatsapp-notifications-messages-for-new-alterestate-form-entries
+  apps:
+  - alterestate
+  - whatsapp-notifications
+- title: Create new deals in AlterEstate for new leads from Facebook Lead Ads
+  url: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1214916/create-new-deals-in-alterestate-for-new-leads-from-facebook-lead-ads
+  apps:
+  - facebook-lead-ads
+  - alterestate
+- title: Create new AlterEstate deals from new Typeform entries
+  url: https://zapier.com/apps/alterestate/integrations/typeform/1290950/create-new-alterestate-deals-from-new-typeform-entries
+  apps:
+  - typeform
+  - alterestate
+template_total: 93
