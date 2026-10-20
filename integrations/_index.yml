@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1202374/create-new-deals-in-alterestate-from-new-leads-in-facebook-lead-ads
   template: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1202374/create-new-deals-in-alterestate-from-new-leads-in-facebook-lead-ads
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: alterestate-create-new-alterestate-deals-from-facebook-messenger-page-messages
@@ -28,6 +29,7 @@
   evidence: https://zapier.com/apps/alterestate/integrations/facebook-messenger/1254451/create-new-alterestate-deals-from-facebook-messenger-page-messages
   template: https://zapier.com/apps/alterestate/integrations/facebook-messenger/1254451/create-new-alterestate-deals-from-facebook-messenger-page-messages
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: alterestate-create-new-deals-in-alterestate-for-new-leads-from-facebook-lead-ads
@@ -42,133 +44,8 @@
   evidence: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1214916/create-new-deals-in-alterestate-for-new-leads-from-facebook-lead-ads
   template: https://zapier.com/apps/alterestate/integrations/facebook-lead-ads/1214916/create-new-deals-in-alterestate-for-new-leads-from-facebook-lead-ads
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
-  arazzo: null
-- slug: alterestate-facebook-conversions
-  label: Facebook Conversions
-  partner_name: Facebook Conversions
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/facebook-conversions
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-chatgpt-openai
-  label: ChatGPT (OpenAI)
-  partner_name: ChatGPT (OpenAI)
-  category: AI Assistants
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/chatgpt
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-anthropic-claude
-  label: Anthropic (Claude)
-  partner_name: Anthropic (Claude)
-  category: AI Models
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/anthropic-claude
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-sql-server
-  label: SQL Server
-  partner_name: SQL Server
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/sql-server
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-webflow
-  label: Webflow
-  partner: webflow
-  partner_name: Webflow
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/webflow
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: alterestate-skool
-  label: Skool
-  partner: skool
-  partner_name: Skool
-  category: Education
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/skool
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-netlify
-  label: Netlify
-  partner: netlify
-  partner_name: Netlify
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/netlify
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: alterestate-lofty
-  label: Lofty
-  partner_name: Lofty
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/lofty
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: alterestate-zoho-books
-  label: Zoho Books
-  partner: zoho-books
-  partner_name: Zoho Books
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/zoho-books
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: alterestate-respond-io
-  label: respond.io
-  partner: respond
-  partner_name: respond.io
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/respondio
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: alterestate-clientify
-  label: Clientify
-  partner_name: Clientify
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/alterestate/integrations/clientify
-  source: edge
-  status: pending-partner-spec
   arazzo: null
 - slug: alterestate-zapier
   label: Zapier
@@ -194,4 +71,145 @@
     beta: false
     builder: unknown (not in the directory record)
   status: not-a-workflow
+  arazzo: null
+- slug: alterestate-facebook-conversions
+  label: Facebook Conversions
+  partner: facebook
+  partner_name: Facebook Conversions
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/facebook-conversions
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-chatgpt-openai
+  label: ChatGPT (OpenAI)
+  partner: openai
+  partner_name: ChatGPT (OpenAI)
+  category: AI Assistants
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/chatgpt
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-anthropic-claude
+  label: Anthropic (Claude)
+  partner: anthropic
+  partner_name: Anthropic (Claude)
+  category: AI Models
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/anthropic-claude
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-sql-server
+  label: SQL Server
+  partner: microsoft-sql-server
+  partner_name: SQL Server
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/sql-server
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-webflow
+  label: Webflow
+  partner: webflow
+  partner_name: Webflow
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/webflow
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-skool
+  label: Skool
+  partner: skool
+  partner_name: Skool
+  category: Education
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/skool
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: alterestate-netlify
+  label: Netlify
+  partner: netlify
+  partner_name: Netlify
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/netlify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-lofty
+  label: Lofty
+  partner_name: Lofty
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/lofty
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: alterestate-zoho-books
+  label: Zoho Books
+  partner: zoho-books
+  partner_name: Zoho Books
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/zoho-books
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-respond-io
+  label: respond.io
+  partner: respond
+  partner_name: respond.io
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/respondio
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: alterestate-clientify
+  label: Clientify
+  partner_name: Clientify
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/alterestate/integrations/clientify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
   arazzo: null
