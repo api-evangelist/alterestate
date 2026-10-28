@@ -1,4 +1,4 @@
-# Alterestate
+# AlterEstate
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,132 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Alterestate is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+AlterEstate is the leading real-estate CRM SaaS for agents across Latin America, serving more than 5,000 agents in seven countries. Its platform centralizes leads, properties and sales in a visual funnel and adds a WhatsApp-integrated AI assistant (Brik), a no-code website builder, a unified inbox, an inter-agency inventory network, and a marketing hub. AlterEstate exposes a public REST API at secure.alterestate.com/api/v1 covering property listings (with backend currency conversion across USD, DOP, MXN, COP, CRC, GTQ and PEN), project developments (buildings and units), agents, geographic locations, and inbound lead submission, plus an OAuth-protected hosted MCP server for agentic access. Backed by 500 Global.
 
-Backed by: 500-global — https://alterestate.com
+**Areas:** Company · Real Estate · CRM · Property Management · Lead Management · Latin America · Software-as-a-Service · Artificial Intelligence · MCP
+
+## AlterEstate on APIs.io
+
+Everything profiled for AlterEstate is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/alterestate/](https://apis.io/providers/alterestate/)** — or go straight to one of the APIs or properties below.
+
+### APIs (5)
+
+- [AlterEstate Agents API](https://apis.io/apis/alterestate/alterestate-agents-api/) — Company agents
+- [AlterEstate Developments API](https://apis.io/apis/alterestate/alterestate-developments-api/) — Real-estate projects, their buildings and units
+- [AlterEstate Leads API](https://apis.io/apis/alterestate/alterestate-leads-api/) — Inbound lead submission into the CRM
+- [AlterEstate Locations API](https://apis.io/apis/alterestate/alterestate-locations-api/) — Cities, sectors and provinces
+- [AlterEstate Properties API](https://apis.io/apis/alterestate/alterestate-properties-api/) — Property listings and detail views
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [alterestate-alterai](https://apis.io/servers/alterestate/alterestate-alterai/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [AlterEstate Agents API](https://apis.io/collections/alterestate/open-alterestate-agents-api/)
+- [AlterEstate Agents Developments API](https://apis.io/collections/alterestate/open-alterestate-developments-api/)
+- [AlterEstate Agents Leads API](https://apis.io/collections/alterestate/open-alterestate-leads-api/)
+- [AlterEstate Agents Locations API](https://apis.io/collections/alterestate/open-alterestate-locations-api/)
+- [AlterEstate Agents Properties API](https://apis.io/collections/alterestate/open-alterestate-properties-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Alterestate Overlay](https://apis.io/overlays/alterestate/alterestate-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Alterestate Authentication](https://apis.io/security/alterestate/alterestate-authentication/)
+- [Alterestate Domain Security](https://apis.io/security/alterestate/alterestate-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Alterestate Scopes](https://apis.io/scopes/alterestate/alterestate-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Alterestate Plans Pricing](https://apis.io/plans/alterestate/alterestate-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://alterestate.com)
+- [Documentation](https://dev.alterestate.com/)
+- [API reference](https://dev.alterestate.com/properties)
+- [Pricing](https://alterestate.com/precios)
+- [Sign up](https://app.alterestate.com/registro)
+- [Support](https://ayuda.alterestate.com)
+- [Blog](https://alterestate.com/blog)
+- [Terms of service](https://alterestate.com/terminos-condiciones)
+- [Privacy policy](https://alterestate.com/politica-de-privacidad)
+
+## API Evangelist rating
+
+**Kin Score 36.9** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 13.9 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 59.2 |
+
+**Agent readiness 41.7** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 31.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/alterestate/](https://apis.io/providers/alterestate/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AlterEstate: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/alterestate/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
